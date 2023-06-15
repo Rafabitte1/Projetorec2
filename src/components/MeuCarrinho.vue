@@ -6,7 +6,10 @@ import CarrinhoVazio from './CarrinhoVazio.vue'
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> ec293e1 (Update with components)
 </script>
 
 <template>
@@ -42,6 +45,7 @@ function formatarPreco(preco) {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <div class="card-livro">
 
 
@@ -55,6 +59,12 @@ function formatarPreco(preco) {
   </div>
       <m-button text="Compartilhar"></m-button>
       
+=======
+      <m-button text="Limpar carrinho" />
+      <m-button text="Finalizar compra" />
+      <m-button text="Continuar comprando" />
+      <m-button text="Salvar" />
+>>>>>>> ec293e1 (Update with components)
       <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
     </div>
   </div>
