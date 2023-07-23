@@ -1,10 +1,10 @@
 export const livros = [
   {
     id: 1,
-    title: 'O Poderoso Chefão',
-    author: 'Mario Puzo',
+    title: 'A Máquina do Tempo - HG Wells: Uma Invenção',
+    author: ' H. G. Wells ',
     price: 49.9,
-    img: 'https://m.media-amazon.com/images/I/31jGFI5wX2L._SX331_BO1,204,203,200_.jpg'
+    img: 'https://m.media-amazon.com/images/I/51OfxjzcrnL._SX331_BO1,204,203,200_.jpg'
   },
   {
     id: 2,
