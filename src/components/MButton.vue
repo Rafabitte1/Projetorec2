@@ -10,7 +10,7 @@ const props = defineProps({
 
 <style scoped>
 button {
-  background-color: blue;
+  background-color: rgb(53, 53, 95);
   color: #fff;
   border: none;
   border-radius: 5px;

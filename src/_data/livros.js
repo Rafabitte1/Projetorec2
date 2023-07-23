@@ -8,79 +8,79 @@ export const livros = [
   },
   {
     id: 2,
-    title: 'O Senhor dos Anéis - Box completo',
-    author: 'J. R. R. Tolkien',
-    price: 129.9,
-    img: 'https://m.media-amazon.com/images/I/715afDdgKfL.jpg'
+    title: 'Interestelar',
+    author: ' Jonathan Nolan',
+    price: 49.9,
+    img: 'https://m.media-amazon.com/images/I/514ChKFvfPL.jpg'
   },
   {
     id: 3,
-    title: 'O Pequeno Príncipe',
-    author: 'Antoine de Saint-Exupéry',
-    price: 19.9,
-    img: 'https://m.media-amazon.com/images/I/41afCn3PQUL._SY344_BO1,204,203,200_QL70_ML2_.jpg'
+    title: '2001: Uma Odisseia no Espaço',
+    author: ' Arthur C. Clarke',
+    price: 39.9,
+    img: 'https://m.media-amazon.com/images/I/51NllOwQA7L._SX331_BO1,204,203,200_.jpg'
   },
   {
     id: 4,
-    title: 'Dom Quixote',
-    author: 'Miguel de Cervantes',
+    title: 'Retirantes: O legado das sombras ',
+    author: ' Daniel Pedrosa ',
     price: 39.9,
-    img: 'https://m.media-amazon.com/images/I/513uHO8IDlL._SX359_BO1,204,203,200_.jpg'
+    img: 'https://m.media-amazon.com/images/I/51B-BrzuLkL._SX334_BO1,204,203,200_.jpg'
   },
   {
     id: 5,
-    title: 'O Conde de Monte Cristo',
-    author: 'Alexandre Dumas',
+    title: 'Espere agora pelo ano passado ',
+    author: ' Philip K. Dick ',
     price: 69.9,
-    img: 'https://m.media-amazon.com/images/I/81ZswN9PVPL._AC_UL320_.jpg'
+    img: 'https://m.media-amazon.com/images/I/51VYOwXUgcL._SX330_BO1,204,203,200_.jpg'
   },
   {
     id: 6,
-    title: 'O Hobbit',
-    author: 'J. R. R. Tolkien',
-    price: 39.9,
-    img: 'https://m.media-amazon.com/images/I/91M9xPIf10L._AC_UL320_.jpg'
+    title: 'Viagem ao Centro da Terra',
+    author: ' Júlio Verne',
+    price: 44.9,
+    img: 'https://m.media-amazon.com/images/I/51tHXK9Mt7L._SX346_BO1,204,203,200_.jpg'
   },
   {
     id: 1,
-    title: 'O Poderoso Chefão',
-    author: 'Mario Puzo',
+    title: 'O fim da eternidade',
+    author: ' Isaac Asimov',
     price: 49.9,
-    img: 'https://m.media-amazon.com/images/I/31jGFI5wX2L._SX331_BO1,204,203,200_.jpg'
+    img: 'https://m.media-amazon.com/images/I/61p+TILWn-L.jpg'
   },
   {
     id: 2,
-    title: 'O Senhor dos Anéis - Box completo',
-    author: 'J. R. R. Tolkien',
-    price: 129.9,
-    img: 'https://m.media-amazon.com/images/I/715afDdgKfL.jpg'
+    title: 'Calamidade: Livro III da série Executores: 3',
+    author: ' Brandon Sanderson',
+    price: 29.9,
+    img: 'https://m.media-amazon.com/images/I/510To878qZL._SX342_BO1,204,203,200_.jpg'
   },
   {
     id: 3,
-    title: 'O Pequeno Príncipe',
-    author: 'Antoine de Saint-Exupéry',
-    price: 19.9,
-    img: 'https://m.media-amazon.com/images/I/41afCn3PQUL._SY344_BO1,204,203,200_QL70_ML2_.jpg'
+    title: 'Star Wars: Luz dos Jedi',
+    author: ' Charles Soule',
+    price: 29.9,
+    img: 'https://m.media-amazon.com/images/I/51fPIBcIW2S._SX339_BO1,204,203,200_.jpg'
   },
   {
     id: 4,
-    title: 'Dom Quixote',
-    author: 'Miguel de Cervantes',
+    title: 'Hereges de Duna',
+    author: 'Frank Herbert ',
     price: 39.9,
-    img: 'https://m.media-amazon.com/images/I/513uHO8IDlL._SX359_BO1,204,203,200_.jpg'
+    img: 'https://m.media-amazon.com/images/I/51y5SPHdyaL._SX346_BO1,204,203,200_.jpg'
   },
   {
     id: 5,
-    title: 'O Conde de Monte Cristo',
-    author: 'Alexandre Dumas',
-    price: 69.9,
-    img: 'https://m.media-amazon.com/images/I/81ZswN9PVPL._AC_UL320_.jpg'
+    title: 'The Umbral Storm ',
+    author: ' Alec Hutson',
+    price: 39.9,
+    img: 'https://m.media-amazon.com/images/I/512041DdegL.jpg'
   },
   {
     id: 6,
-    title: 'O Hobbit',
-    author: 'J. R. R. Tolkien',
+    title: 'A hipótese da simulação: Conheça a teoria por trás da série Matrix ',
+    author: ' Rizwan Virk',
     price: 39.9,
-    img: 'https://m.media-amazon.com/images/I/91M9xPIf10L._AC_UL320_.jpg'
+    img: 'https://m.media-amazon.com/images/I/417jCUD-1BL._SX331_BO1,204,203,200_.jpg'
   }
 ]
