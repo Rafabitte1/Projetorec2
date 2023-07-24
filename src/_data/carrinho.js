@@ -15,7 +15,7 @@ function removerItemCarrinho(item) {
   const index = carrinho.value.itens.findIndex((i) => i.id === item.id)
   carrinho.value.total -= item.total
   carrinho.value.itens.splice(index, 1)
-}
+};
 
 function adicionarAoCarrinho(livro) {
   const index = carrinho.value.itens.findIndex((item) => item.id === livro.id)
@@ -32,5 +32,16 @@ function adicionarAoCarrinho(livro) {
     carrinho.value.total += livro.price
   }
 }
+ function finalizarCompra(livro) {
+  // Simulação de processamento de pagamento (pode ser substituído por lógica real)
+  setTimeout(() => {
+    this.compraFinalizada = true;
+    setTimeout(() => {
+      this.compraFinalizada = false; // Ocultar a mensagem após 5 segundos
+    }, 5000); // 5 segundos de exibição da mensagem
+  }, 2000); // 2 segundos de simulação de processamento
+}
 
-export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem }
+;
+
+export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem, finalizarCompra };

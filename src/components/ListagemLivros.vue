@@ -12,6 +12,7 @@ import CardLivro from '@/components/CardLivro.vue'
       v-bind:key="livro.id"
       v-bind:livro="livro"
       @adicionarAoCarrinho="adicionarAoCarrinho"
+      
     />
   </div>
 </template>
