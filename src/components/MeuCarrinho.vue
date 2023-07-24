@@ -42,23 +42,19 @@ function formatarPreco(preco) {
         </div>
       </div>
 
-  
-      
-      
 
-   
-        
-      <div>
+      <div class="card-livro">
+        <div>
       <m-button v-if="compraFinalizada" text="Finalizar compra" @click="compraFinalizada(compraFinalizada)" >
         <p>Obrigado pela compra! Seu pedido foi processado com sucesso. {{ compraFinalizada }}</p></m-button>
   </div>
-      <div class="card-livro">
   </div>
-      <m-button text="Compartilhar"></m-button>
+     
 
       <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
     </div>
   </div>
+  
 </template>
 
 <style scoped>
