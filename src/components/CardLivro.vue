@@ -1,4 +1,5 @@
 <script setup>
+import { finalizarCompra } from '../_data/carrinho';
 import MButton from './MButton.vue'
 
 const props = defineProps({
@@ -6,7 +7,6 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['adicionarAoCarrinho'])
-
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
 }
@@ -27,8 +27,23 @@ function formatarPreco(preco) {
         @click="emit('adicionarAoCarrinho', props.livro)"
         text="Adicionar ao carrinho"
       ></m-button>
+      <m-button
+        @click="finalizarCompra(props.livro)"
+        v-if="!compraFinalizada"
+        text="Finalizar compra"
+      ></m-button>
+      <m-button
+        v-if="compraFinalizada"
+        class="mensagem-finalizada"
+        text="Finalizar compra"
+      >
+        <h2>Compra Finalizada!</h2>
+        <p>Obrigado pela compra! Seu pedido foi processado com sucesso.</p>
+      </m-button>
       <m-button text="Compartilhar" />
     </div>
+
+    
   </div>
 </template>
 
@@ -65,5 +80,11 @@ function formatarPreco(preco) {
 .card-livro .titulo-livro {
   font-weight: bold;
   margin-bottom: 5px;
+}
+.mensagem-finalizada {
+  margin-top: 20px;
+  background-color: #c1f0c1;
+  padding: 10px;
+  border: 1px solid #75c975;
 }
 </style>
