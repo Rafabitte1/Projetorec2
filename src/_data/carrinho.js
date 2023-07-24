@@ -31,17 +31,13 @@ function adicionarAoCarrinho(livro) {
     carrinho.value.itens[index].total += livro.price
     carrinho.value.total += livro.price
   }
-}
- function finalizarCompra(livro) {
+};
+function compraFinalizada() {
   // Simulação de processamento de pagamento (pode ser substituído por lógica real)
   setTimeout(() => {
-    this.compraFinalizada = true;
-    setTimeout(() => {
-      this.compraFinalizada = false; // Ocultar a mensagem após 5 segundos
-    }, 5000); // 5 segundos de exibição da mensagem
+    alert(`Compra finalizada !!`)
+    carrinho.value.itens.push = []; // Limpar o carrinho após finalizar a compra
+    carrinho.value.total = 0; // Reiniciar o total do carrinho após finalizar a compra
   }, 2000); // 2 segundos de simulação de processamento
 }
-
-;
-
-export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem, finalizarCompra };
+export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,compraFinalizada };

@@ -1,7 +1,7 @@
 <script setup>
 import { livros } from '@/_data/livros.js'
 import { adicionarAoCarrinho } from '@/_data/carrinho.js'
-
+import { compraFinalizada } from '../_data/carrinho';
 import CardLivro from '@/components/CardLivro.vue'
 </script>
 
@@ -12,7 +12,7 @@ import CardLivro from '@/components/CardLivro.vue'
       v-bind:key="livro.id"
       v-bind:livro="livro"
       @adicionarAoCarrinho="adicionarAoCarrinho"
-      
+      @compraFinalizada="compraFinalizada"
     />
   </div>
 </template>
