@@ -43,7 +43,7 @@ function formatarPreco(preco) {
         </div>
       </div>
       <div class="card-livro">
-    <!-- Conteúdo do card de livro aqui -->
+
 
     <!-- Botão "Finalizar Compra" -->
     <button @click="finalizarCompra" v-if="!compraFinalizada">Finalizar Compra</button>
