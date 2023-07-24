@@ -41,10 +41,27 @@ function formatarPreco(preco) {
           </div>
         </div>
       </div>
+
       <m-button text="Limpar carrinho" />
       <m-button text="Finalizar compra" />
       <m-button text="Continuar comprando" />
       <m-button text="Salvar" />
+
+      <div class="card-livro">
+
+
+    <!-- Botão "Finalizar Compra" -->
+    <button @click="finalizarCompra" v-if="!compraFinalizada">Finalizar Compra</button>
+
+    <!-- Mensagem de Compra Finalizada -->
+    <div v-if="compraFinalizada" class="mensagem-finalizada">
+      <h2>Compra Finalizada!</h2>
+      <p>Obrigado pela compra! Seu pedido foi processado com sucesso.</p>
+    </div>
+  </div>
+      <m-button text="Compartilhar"></m-button>
+      
+>>>>>>> 443d89d (.)
       <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
     </div>
   </div>
