@@ -12,6 +12,7 @@ import MeuCarrinho from '@/components/MeuCarrinho.vue'
 </template>
 
 <style scoped>
+
 .container-geral {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -21,6 +22,11 @@ h1{
   contain: content;
   position: relative;
   font-size: 28px;
+  color: #004080;
+      background-color: #f0f0f0;
+      padding: 20px 0;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .h1::before{
   content: '';
