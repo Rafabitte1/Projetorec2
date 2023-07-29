@@ -1,6 +1,8 @@
 <script setup>
-import ListagemLivros from '@/components/ListagemLivros.vue'
-import MeuCarrinho from '@/components/MeuCarrinho.vue'
+import ListagemLivros from '@/components/ListagemLivros.vue';
+import MeuCarrinho from '@/components/MeuCarrinho.vue';
+
+
 </script>
 
 <template>
@@ -8,6 +10,7 @@ import MeuCarrinho from '@/components/MeuCarrinho.vue'
   <div class="container-geral">
     <listagem-livros />
     <meu-carrinho />
+    <formulario/>
   </div>
 </template>
 

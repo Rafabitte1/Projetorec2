@@ -41,4 +41,41 @@ function compraFinalizada(livro) {
 
   }, 2000); // 2 segundos de simulação de processamento
 }
-export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,compraFinalizada };
+  function criaformulario(livro) {
+  const formData = {
+    nome: '',
+    email: '',
+    senha: '',
+    cartao: '',
+    cep: '',
+  };
+
+  function confirmAndSubmit() {
+    if (window.confirm('Tem certeza de que deseja confirmar a compra?')) {
+      submitForm();
+    }
+  }
+
+  function submitForm() {
+    // Lógica para enviar os dados do formulário para o backend ou executar outras ações após o envio.
+    console.log(formData);
+
+    // Limpa o formulário após o envio
+    resetForm();
+  }
+
+  function resetForm() {
+    for (const key in formData) {
+      formData[key] = '';
+    }
+  }
+
+  return {
+    formData,
+    confirmAndSubmit,
+  };
+}
+
+
+
+export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,compraFinalizada, criaformulario  };

@@ -1,8 +1,8 @@
 <script setup>
-import { carrinho, removerItemCarrinho, atualizaQuantidadeItem } from '@/_data/carrinho.js'
+import { carrinho, removerItemCarrinho, atualizaQuantidadeItem, criaformulario } from '@/_data/carrinho.js'
 import MButton from './MButton.vue'
 import CarrinhoVazio from './CarrinhoVazio.vue'
-import { compraFinalizada } from '../_data/carrinho';
+import { carrinho } from '../_data/carrinho';
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
 }
@@ -45,8 +45,8 @@ function formatarPreco(preco) {
 
       <div class="card-livro">
         <div>
-      <m-button v-if="compraFinalizada" text="Finalizar compra" @click="compraFinalizada(compraFinalizada)" >
-        <p>Obrigado pela compra! Seu pedido foi processado com sucesso. {{ compraFinalizada }}</p></m-button>
+      <m-button  text="Criar formulario"   >
+     <router-link to="/Formulario.vue"></router-link> </m-button>
   </div>
   </div>
      
