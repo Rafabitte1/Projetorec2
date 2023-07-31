@@ -1,9 +1,8 @@
 <script setup>
-import { carrinho, removerItemCarrinho, atualizaQuantidadeItem,   } from '@/_data/carrinho.js'
+import { carrinho, removerItemCarrinho, atualizaQuantidadeItem,    } from '@/_data/carrinho.js'
 import MButton from './MButton.vue';
 import CarrinhoVazio from './CarrinhoVazio.vue';
-
-import { exibirFormularioPagamento } from '../_data/carrinho';
+import { exibirFormulario, mostrarFormulario, processarPagamento } from '../_data/carrinho';
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
 }
@@ -42,19 +41,40 @@ function formatarPreco(preco) {
           </div>
         </div>
       </div>
-
-
+    </div>
+<div class="carrinho">
       <div class="card-livro">
-        <div>
-      <m-button  text="Criar formulario" @click="exibirFormularioPagamento"  ></m-button>
-     <button @click="exibirFormularioPagamento in livro">Pagar</button> 
-  </div>
-  </div>
+        
+        <m-button v-if="carrinho.itens" text="Criar formulario" @click="exibirFormulario"></m-button>
+
+      <div v-if="mostrarFormulario">
+       
+    <form class="container" @submit="processarPagamento">
      
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" v-model="formData.nome" >
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" v-model="formData.email" >
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" v-model="formData.senha" >
+
+      <label for="cartao">Número do Cartão de Crédito ou Débito:</label>
+      <input type="text" id="cartao" v-model="formData.cartao" >
+
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" v-model="formData.cep" >
+
+      <button type="submit" @click="processarPagamento">Enviar</button>
+    </form>
+  </div>
+  </div>
+      </div>   
 
       <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
     </div>
-  </div>
+  
   
 </template>
 
@@ -114,5 +134,9 @@ function formatarPreco(preco) {
 .carrinho {
   /* min-width: 20%; */
 }
-
+.card-livro{
+font-size: 4.1mm;
+  font-weight: lighter;
+  display: block;
+}
 </style>
