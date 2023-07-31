@@ -4,8 +4,9 @@ const carrinho = ref({
   itens: [],
   total: 0
 })
-
+let mostrarFormulario = false;
 function atualizaQuantidadeItem(item) {
+  
   carrinho.value.total -= item.total
   item.total = item.price * item.quantidade
   carrinho.value.total += item.total
@@ -30,52 +31,36 @@ function adicionarAoCarrinho(livro) {
     carrinho.value.itens[index].quantidade++
     carrinho.value.itens[index].total += livro.price
     carrinho.value.total += livro.price
-  }
-};
-function compraFinalizada(livro) {
-  // Simulação de processamento de pagamento (pode ser substituído por lógica real)
-  setTimeout((livro) => {
-    alert(`compra finalizada!!!`)
-    carrinho.value.itens = []; // Limpar o carrinho após finalizar a compra
-    carrinho.value.total = 0; // Reiniciar o total do carrinho após finalizar a compra
 
-  }, 2000); // 2 segundos de simulação de processamento
-}
-  function criaformulario(livro) {
-  const formData = {
-    nome: '',
-    email: '',
-    senha: '',
-    cartao: '',
-    cep: '',
+    function exibirFormulario(item) {
+      mostrarFormulario = true;
+    };
+    
+    function ocultarFormulario(item) {
+      mostrarFormulario = false;
+    };
+    
   };
-
-  function confirmAndSubmit() {
-    if (window.confirm('Tem certeza de que deseja confirmar a compra?')) {
-      submitForm();
-    }
+  function processarPagamento(event) {
+    event.preventDefault();
+  
+    // Recupere os valores dos campos do formulário
+    const nome = event.target.nome.value;
+    const dataNascimento = event.target.data.value;
+    const email = event.target.email.value;
+    const senha = event.target.senha.value;
+    const numeroCartao = event.target.cartao.value;
+    const cep = event.target.cep.value;
+  
+    // Simulação de processamento de pagamento (pode ser substituído por lógica real)
+    setTimeout(() => {
+      alert(`compra finalizada!!!`);
+      carrinho.value.itens = []; // Limpar o carrinho após finalizar a compra
+      carrinho.value.total = 0; // Reiniciar o total do carrinho após finalizar a compra
+    }, 2000); // 2 segundos de simulação de processamento
+  
+    // Limpe os campos do formulário após o envio
+    event.target.reset();
   }
-
-  function submitForm() {
-    // Lógica para enviar os dados do formulário para o backend ou executar outras ações após o envio.
-    console.log(formData);
-
-    // Limpa o formulário após o envio
-    resetForm();
-  }
-
-  function resetForm() {
-    for (const key in formData) {
-      formData[key] = '';
-    }
-  }
-
-  return {
-    formData,
-    confirmAndSubmit,
-  };
 }
-
-
-
-export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,compraFinalizada, criaformulario  };
+export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,processarPagamento,  mostrarFormulario, exibirFormulario,};

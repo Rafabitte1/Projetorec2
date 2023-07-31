@@ -1,78 +1,54 @@
 <script setup>
-import { carrinho } from '@/_data/livros.js'
-import { compraFinalizada } from '../_data/carrinho';
-
+import {livros} from '../_data/livros'
+import {processarPagamento} from '../_data/carrinho'
 </script>
 
 
 <template>
     <div class="container">
-      <h1>Cadastro</h1>
-      <form @submit.prevent="submitForm">
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" v-model="formData.nome" required><br>
-  
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" v-model="formData.email" required><br>
-  
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" v-model="formData.senha" required><br>
-  
-        <label for="cartao">Cartão de Crédito ou Débito:</label>
-        <input type="text" id="cartao" v-model="formData.cartao" required><br>
-  
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" v-model="formData.cep" required><br>
-  
-        <input type="submit" value="Finalizar a Compra">
-      </form>
-      <div v-if="compraFinalizada" class="mensagem-finalizada">
-      <p>Compra Finalizada com Sucesso!</p>
-      <router-link to="/listagemLivros.vue">Ver Lista de Livros</router-link>
-    </div>
+  <div v-if="mostrarFormulario">
+    <form @submit="processarPagamento">
+     
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" v-model="formData.nome" required>
 
-    </div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" v-model="formData.email" required>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" v-model="formData.senha" required>
+
+      <label for="cartao">Número do Cartão de Crédito ou Débito:</label>
+      <input type="text" id="cartao" v-model="formData.cartao" required>
+
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" v-model="formData.cep" required>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <div v-else>
+    <button v-if="livros" @click="processarPagamento" >Finalizar Compra</button>
+  </div>
+</div>
   </template>
   
   <style scoped>
+
+
 .container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
+  position: relative;
+  font-size: medium;
+  font-weight: bolder;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
+.elemento {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+
 }
-
-label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input {
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-
 </style>
   
