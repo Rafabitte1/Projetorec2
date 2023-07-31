@@ -2,7 +2,7 @@
 const props = defineProps({
   text: String
 })
-
+import { exibirFormulario } from '../_data/carrinho';
 </script>
 
 <template>

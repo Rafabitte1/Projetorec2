@@ -1,7 +1,7 @@
 <script setup>
 import ListagemLivros from '@/components/ListagemLivros.vue';
 import MeuCarrinho from '@/components/MeuCarrinho.vue';
-
+import { exibirFormulario, mostrarFormulario } from './_data/carrinho';
 
 </script>
 
@@ -10,7 +10,7 @@ import MeuCarrinho from '@/components/MeuCarrinho.vue';
   <div class="container-geral">
     <listagem-livros />
     <meu-carrinho />
-    <formulario/>
+    <mostrarFormulario/>
   </div>
 </template>
 

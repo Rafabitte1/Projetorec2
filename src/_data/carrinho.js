@@ -33,24 +33,25 @@ function adicionarAoCarrinho(livro) {
   }
 }
 
-function exibirFormulario(mostrarFormulario) {
+function exibirFormulario() {
   mostrarFormulario = true;
 }
 
-function ocultarFormulario(mostrarFormulario) {
+function ocultarFormulario() {
   mostrarFormulario = false;
 }
 
 function processarPagamento(event) {
-  event.preventDefault();
+  event.preventDefault(mostrarFormulario);
 
-  const nome = event.target.nome.value;
-  const dataNascimento = event.target.data.value;
-  const email = event.target.email.value;
-  const senha = event.target.senha.value;
-  const numeroCartao = event.target.cartao.value;
-  const cep = event.target.cep.value;
-
+  const formData = ref({
+    nome: '',
+    email: '',
+    senha: '',
+    cartao: '',
+    cep: ''
+  });
+  
   setTimeout(() => {
     alert(`compra finalizada!!!`);
     carrinho.value.itens = []; 
@@ -59,5 +60,25 @@ function processarPagamento(event) {
 
   
   event.target.reset(event);
+};
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    {
+      path: '/carrinho',
+      component:carrinho
+    },
+    {
+      path: '/formulario',
+      component: Formulario
+    }
+  ]
+});
+
+function irParaFormulario() {
+  router.push('/formulario');
 }
-export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,processarPagamento,  mostrarFormulario, exibirFormulario, ocultarFormulario};
+
+
+
+export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,processarPagamento, exibirFormulario, ocultarFormulario, irParaFormulario};
