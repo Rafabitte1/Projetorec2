@@ -1,5 +1,6 @@
 import { ref } from 'vue'
-
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 const carrinho = ref({
   itens: [],
   total: 0
@@ -65,7 +66,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '/carrinho',
+      path: '/MeuCarrinho',
       component:carrinho
     },
     {

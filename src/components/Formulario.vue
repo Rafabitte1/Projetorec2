@@ -1,12 +1,8 @@
 
 
 <script setup>
-import { createApp } from 'vue';
-import App from './App.vue';
-import { createRouter, createWebHistory } from 'vue-router';
-import Carrinho from './components/Carrinho.vue';
-import Formulario from './components/Formulario.vue';
 
+import { processarPagamento } from '../_data/carrinho';
 </script>
 <template><div class="carrinho">
     <div class="card-livro">
