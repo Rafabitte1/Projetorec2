@@ -1,7 +1,7 @@
 
 
 <script setup>
-import { exibirFormulario, mostrarFormulario, processarPagamento } from '../_data/carrinho';
+import {  mostrarFormulario, processarPagamento } from '../_data/carrinho';
 import {router}from '../_data/carrinho'
 import {formData}from '../_data/carrinho'
 import { processarPagamento } from '../_data/carrinho';

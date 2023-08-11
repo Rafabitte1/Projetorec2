@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 const carrinho = ref({
   itens: [],
   total: 0
@@ -67,9 +67,9 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'inicio',
-      component: homeView
+      path: '/ListagemLivro',
+      name: 'Livro',
+      component: homeviuew,
     },
     
     {
@@ -78,18 +78,18 @@ const router = createRouter({
       component: MeuCarrinho
     },
     {
-      path: '/finalizaCompra',
-      name: 'finalizaCompra',
-      component: compraView
+      path: '/processarPagamento',
+      name: 'processaePagamento',
+      component: processarPagamento
     },
 
     {
       path:'/Formulario',
       name:'formulario',
-      component:irParaFormulario
+     component: mostrarFormulario
     },
   ]
 })
 
 
-export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,processarPagamento, exibirFormulario, ocultarFormulario};
+export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,processarPagamento, exibirFormulario, ocultarFormulario , router ,mostrarFormulario,createWebHistory};

@@ -1,8 +1,7 @@
 <script setup>
-import { carrinho, removerItemCarrinho, atualizaQuantidadeItem,    } from '@/_data/carrinho.js'
-import MButton from './MButton.vue'
-import CarrinhoVazio from './CarrinhoVazio.vue';
-import{irParaFormulario} from '../_data/carrinho'
+import { carrinho, removerItemCarrinho, atualizaQuantidadeItem,mostrarFormulario, } from '@/_data/carrinho.js'
+import MButton from '@/components/MButton.vue'
+import CarrinhoVazio from '@/components/CarrinhoVazio.vue';
 
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
@@ -49,7 +48,7 @@ function formatarPreco(preco) {
 
       <!-- Adicione a chamada do método irParaFormulario ao clicar no botão -->
       
-    <m-button v-if="carrinho.itens.length > 0" text="Criar formulário" @click="irParaFormulario" />
+    <m-button v-if="carrinho.itens.length > 0" text="Criar formulário" @click="mostrarFormulario" />
 
       
     </div>
