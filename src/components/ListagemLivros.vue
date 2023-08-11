@@ -1,6 +1,6 @@
 <script setup>
 import { livros } from '@/_data/livros.js';
-import { adicionarAoCarrinho, exibirFormulario,mostrarFormulario } from '../_data/carrinho';
+import { adicionarAoCarrinho, exibirFormulario, } from '@/_data/carrinho.js';
 import CardLivro from '@/components/CardLivro.vue';
 
 </script>
@@ -13,7 +13,6 @@ import CardLivro from '@/components/CardLivro.vue';
       v-bind:livro="livro"
       @adicionarAoCarrinho="adicionarAoCarrinho"
       @exibirFormulario="exibirFormulario"
-      @mostrarFormulario="mostrarFormulario"
       @processarPagamento="processarPagamento"
       
     />

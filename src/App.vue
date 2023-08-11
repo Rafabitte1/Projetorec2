@@ -1,8 +1,6 @@
 <script setup>
 import ListagemLivros from '@/components/ListagemLivros.vue';
 import MeuCarrinho from '@/components/MeuCarrinho.vue';
-import { exibirFormulario, mostrarFormulario } from './_data/carrinho';
-
 </script>
 
 <template>

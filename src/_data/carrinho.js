@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
+
 const carrinho = ref({
   itens: [],
   total: 0
@@ -63,36 +63,6 @@ function processarPagamento(event) {
   event.target.reset(event);
 };
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/ListagemLivro',
-      name: 'Livro',
-      component: homeview,
-    },
-    
-    {
-      path: '/carrinho',
-      name: 'carrinho',
-      component: MeuCarrinho
-    },
-    {
-      path: '/processarPagamento',
-      name: 'processaePagamento',
-      component: processarPagamento
-    },
-
-    {
-      path:'/Formulario',
-      name:'formulario',
-     component: mostrarFormulario
-    },
-  ]
-  
-},function voltarParaCarrinho() {
-  router.push({ name: 'homeviuew' });
-})
 
 
-export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,processarPagamento, exibirFormulario, ocultarFormulario , router ,mostrarFormulario,createWebHistory, };
+export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,processarPagamento, exibirFormulario, ocultarFormulario , };
