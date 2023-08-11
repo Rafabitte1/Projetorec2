@@ -2,9 +2,6 @@
 import { carrinho, removerItemCarrinho, atualizaQuantidadeItem,    } from '@/_data/carrinho.js'
 import MButton from './MButton.vue'
 import CarrinhoVazio from './CarrinhoVazio.vue';
-import { exibirFormulario, mostrarFormulario, processarPagamento } from '../_data/carrinho';
-import {router}from '../_data/carrinho'
-import {formData}from '../_data/carrinho'
 import{irParaFormulario} from '../_data/carrinho'
 
 function formatarPreco(preco) {
@@ -51,7 +48,8 @@ function formatarPreco(preco) {
     <div class="card-livro">
 
       <!-- Adicione a chamada do método irParaFormulario ao clicar no botão -->
-      <m-button v-if="carrinho.itens.length > 0" text="Criar formulário" @click="irParaFormulario" />
+      
+    <m-button v-if="carrinho.itens.length > 0" text="Criar formulário" @click="irParaFormulario" />
 
       
     </div>

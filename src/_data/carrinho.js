@@ -1,6 +1,5 @@
 import { ref } from 'vue'
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router'
 const carrinho = ref({
   itens: [],
   total: 0
@@ -34,11 +33,12 @@ function adicionarAoCarrinho(livro) {
   }
 }
 
-function exibirFormulario() {
+
+function exibirFormulario(livro) {
   mostrarFormulario = true;
 }
 
-function ocultarFormulario() {
+function ocultarFormulario(livro) {
   mostrarFormulario = false;
 }
 
@@ -62,24 +62,34 @@ function processarPagamento(event) {
   
   event.target.reset(event);
 };
+
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/MeuCarrinho',
-      component:carrinho
+      path: '/',
+      name: 'inicio',
+      component: homeView
+    },
+    
+    {
+      path: '/carrinho',
+      name: 'carrinho',
+      component: MeuCarrinho
     },
     {
-      path: '/formulario',
-      component: Formulario
-    }
+      path: '/finalizaCompra',
+      name: 'finalizaCompra',
+      component: compraView
+    },
+
+    {
+      path:'/Formulario',
+      name:'formulario',
+      component:irParaFormulario
+    },
   ]
-});
-
-function irParaFormulario() {
-  router.push('/formulario');
-}
+})
 
 
-
-export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,processarPagamento, exibirFormulario, ocultarFormulario, irParaFormulario};
+export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,processarPagamento, exibirFormulario, ocultarFormulario};

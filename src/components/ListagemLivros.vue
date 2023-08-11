@@ -1,11 +1,7 @@
 <script setup>
-import { livros } from '@/_data/livros.js'
-import { adicionarAoCarrinho } from '@/_data/carrinho.js'
-
-import { exibirFormulario } from '../_data/carrinho';
-import{mostrarFormulario} from '../_data/carrinho';
-import {processarPagamento} from '../_data/carrinho'
-import CardLivro from '@/components/CardLivro.vue'
+import { livros } from '@/_data/livros.js';
+import { adicionarAoCarrinho, exibirFormulario, } from '../_data/carrinho';
+import CardLivro from '@/components/CardLivro.vue';
 </script>
 
 <template>
