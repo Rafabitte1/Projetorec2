@@ -2,6 +2,7 @@
 import { livros } from '@/_data/livros.js';
 import { adicionarAoCarrinho, exibirFormulario,mostrarFormulario } from '../_data/carrinho';
 import CardLivro from '@/components/CardLivro.vue';
+
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import CardLivro from '@/components/CardLivro.vue';
       @exibirFormulario="exibirFormulario"
       @mostrarFormulario="mostrarFormulario"
       @processarPagamento="processarPagamento"
+      
     />
   </div>
 </template>

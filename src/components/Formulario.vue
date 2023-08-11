@@ -5,6 +5,9 @@ import {  mostrarFormulario, processarPagamento } from '../_data/carrinho';
 import {router}from '../_data/carrinho'
 import {formData}from '../_data/carrinho'
 import { processarPagamento } from '../_data/carrinho';
+function voltarParaCarrinho() {
+    router.push({ name: 'ListagemLivros' });
+  }
 </script>
 <template><div class="carrinho">
     <div class="card-livro">
@@ -32,6 +35,7 @@ import { processarPagamento } from '../_data/carrinho';
     <input type="text" id="cep" v-model="formData.cep" required >
     <button type="submit" @click="processarPagamento">Enviar</button>
   </form>
+  <button @click="voltarParaCarrinho">Voltar</button> 
 </div>
 </div>
 </div></template>

@@ -69,7 +69,7 @@ const router = createRouter({
     {
       path: '/ListagemLivro',
       name: 'Livro',
-      component: homeviuew,
+      component: homeview,
     },
     
     {
@@ -89,7 +89,10 @@ const router = createRouter({
      component: mostrarFormulario
     },
   ]
+  
+},function voltarParaCarrinho() {
+  router.push({ name: 'homeviuew' });
 })
 
 
-export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,processarPagamento, exibirFormulario, ocultarFormulario , router ,mostrarFormulario,createWebHistory};
+export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem,processarPagamento, exibirFormulario, ocultarFormulario , router ,mostrarFormulario,createWebHistory, };
